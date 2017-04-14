@@ -1,4 +1,5 @@
 /* Global Styles */
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
@@ -21,7 +22,35 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 10px;
 }
 
+
+
 #footer {
 	border-top: 1px solid #dddddd;
 	padding-top: 10px;
 }
+
+/* Visits Journal CSS */
+
+#visits-date th {
+	text-align: center;
+}
+
+.page-nav{
+	list-style: none;
+	text-align: center;
+}
+.page-nav li {
+	display: inline;
+}
+
+/* Students Form CSS*/
+
+#save-cancel-buttons {
+background-color: #E0E0E0;
+padding-top: 20px;
+
+}
+#cancel-button{
+	margin-left: 10px;
+}
+
