@@ -52,6 +52,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'studentsdb.urls'
 
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -63,10 +65,14 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'studentsdb.context_processors.students_proc',
             ],
         },
     },
 ]
+
+
+
 
 WSGI_APPLICATION = 'studentsdb.wsgi.application'
 
@@ -119,3 +125,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+PORTAL_URL = 'http://localhost:8000'

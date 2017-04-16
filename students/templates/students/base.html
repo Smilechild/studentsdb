@@ -8,7 +8,7 @@
 		<meta name="description" value="Система Обліку Студентів Навчального Закладу">
 		<!-- Include Styles -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+		<link rel="stylesheet" type="text/css" href="{{ PORTAL_URL}}{% static "css/main.css" %}">
 		{% block extra_css %}{% endblock extra_css %}
 	</head>
 
@@ -36,17 +36,18 @@
 			<!-- End Header -->
 
 			<!-- Start SubHeader -->
+			
 			<div class="row" id="sub-header">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs">
-  						<li role="presentation" class="active">
+  						<li role="presentation" {% if request.path == '/' %}class="active"{% endif %}>
   							<a href="{% url "home" %}">Студенти</a>
   						</li>
-  						<li role="presentation">
-  							<a href="/journal">Відвідування</a>
+  						<li role="presentation" {% if request.path == '/journal' %}class="active"{% endif %}>
+  							<a href="/journal" >Відвідування</a>
   						</li>
-  						<li role="presentation">
-  							<a href="{% url "groups" %}">Групи</a>
+  						<li role="presentation" {% if request.path == '/groups/' %}class="active"{% endif %}>
+  							<a href="{% url "groups" %}" >Групи</a>
   						</li>
 					</ul>
 				</div>
